@@ -10,7 +10,7 @@ const Blog =({blog, update})=>{//blog and update property is got from AllBlog.js
     const deleteBlog =(blogId)=>{
         axios.delete(`${base_url}/delete/${blogId}`).then(
             (response)=>{
-                toast.info("Blog"+blogId+"deleted successfully!");
+                toast.info("Blog "+blogId+" deleted successfully!");
                 update(blogId);
             },
             (error)=>{
@@ -30,7 +30,8 @@ const Blog =({blog, update})=>{//blog and update property is got from AllBlog.js
                 <CardText>{blog.content}</CardText>
                 
                 <Container>
-                    <Link className="btn btn-primary" to="/update" style={{marginRight:15+"px"}}>
+                    <Link className="btn btn-primary" to={{pathname:"/update", param:blog.blogId}} //blogId is used in UpdateBlog.js in getBlogFromServerById method 
+                    style={{marginRight:15+"px"}}>
                         Edit
                     </Link>
                     <Button className="btn btn-danger"
