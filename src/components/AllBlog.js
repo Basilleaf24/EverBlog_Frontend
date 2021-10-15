@@ -15,6 +15,10 @@ const AllBlogs = ()=>{
         getAllBlogsFromServer()
     }, [])
 
+    const updateBlogs=(blogId)=>{
+        setBlogs(blogs.filter((blog)=>blog.blogId!==blogId))
+    }
+
     const getAllBlogsFromServer = ()=>{
         axios.get(`${base_url}/all`).then(
             (response)=>{
@@ -36,7 +40,7 @@ const AllBlogs = ()=>{
             {
                 blogs.length>0?
                 blogs.map((blog)=>(
-                    <Blog key={blog.blogId} blog={blog}/>
+                    <Blog key={blog.blogId} blog={blog} update={updateBlogs}/>
                 ))
                 :
                 "No blogs available to display"
