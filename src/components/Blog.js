@@ -34,7 +34,7 @@ const Blog =({blog, update})=>{//blog and update property is got from AllBlog.js
                         Edit
                     </Link>
                     <Button className="btn btn-danger"
-                    onclick={()=>{
+                    onClick={()=>{
                         deleteBlog(blog.blogId)
                     }}>
                         Delete
