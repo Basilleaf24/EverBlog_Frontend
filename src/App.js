@@ -13,8 +13,8 @@ function App() {
       <Card body inverse style={{backgroundColor:'#333', borderColor:'#333'}}>
         <ToastContainer/>
         <Router>
-          <CardTitle className="sisplay-2">
-            Hello World
+          <CardTitle className="display-2">
+            Hola Blogger!
           </CardTitle>
           <Container>
             <Row>

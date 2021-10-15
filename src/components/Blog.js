@@ -6,17 +6,17 @@ const Blog =({blog})=>{//blog property is got from AllBlog.js
     return(
         <Card body inverse color="info">
             <CardBody>
-                <CardTitle className="font-weight-bold">
+                <CardTitle className="font-weight-bold" style={{fontWeight:"bold"}}>
                     {blog.title}
                 </CardTitle>
 
                 <CardText>{blog.content}</CardText>
                 
                 <Container>
-                    <Link className="btn btn-primary" to="/update">
+                    <Link className="btn btn-primary" to="/update" style={{marginRight:15+"px"}}>
                         Edit
                     </Link>
-                    <Button>
+                    <Button className="btn btn-danger">
                         Delete
                     </Button>
                 </Container>
